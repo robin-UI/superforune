@@ -1,0 +1,41 @@
+@use 'index';
+@use "sass:color";
+
+// Colors
+$primary-color: #646cff;
+$react-color: #61dafb;
+$text-color: #888;
+
+// Game Button Colors
+$button-border-active: #FFBB00;
+$button-border-default: rgba(206, 0, 0, 1);
+$button-bg-start: rgb(255, 183, 183);
+$button-bg-end: #CE0000;
+$button-text-disabled: #FFFFFF50;
+
+// Login Theme Colors
+$login-bg: #242424;
+$login-card-bg: #292A59;
+$login-text-color: rgba(255, 255, 255, 0.87);
+$login-button-bg: #dc3545;
+$login-button-hover: color.adjust($login-button-bg, $lightness: -10%);
+$login-close-bg: transparent;
+$login-input-bg: #3D3F85;
+
+// Dimensions
+$logo-size: 6em;
+$logo-padding: 1.5em;
+$card-padding: 2em;
+
+// Login Dimensions
+$login-input-height: 46px;
+$login-border-radius: 8px;
+$login-padding: 20px;
+
+// Animations
+$logo-spin-duration: 20s;
+$transition-speed: 0.3s;
+
+// Layout
+$root-max-width: 1280px;
+$root-padding: 2rem;

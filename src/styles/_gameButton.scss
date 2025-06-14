@@ -1,0 +1,62 @@
+@use "variables" as *;
+
+.game-button {
+  color: white;
+  font-size: 1.5rem;
+  font-family: "Poppins-Bold", sans-serif;
+  // text-transform: uppercase;
+  border: 2px solid $button-border-default;
+  background: $button-bg-start;
+  background-image: linear-gradient(
+    180deg,
+    rgba(255, 183, 183, 0.1),
+    $button-bg-end,
+    $button-bg-end,
+    $button-bg-end,
+    $button-bg-end,
+    $button-bg-end,
+    $button-bg-end,
+    $button-bg-end,
+    $button-bg-end,
+    $button-bg-end
+  );
+  border-radius: 8px;
+  box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.7);
+  padding: 8px 20px;
+  cursor: pointer;
+  // min-width: 120px;
+  position: relative;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              background-image 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1),
+              border-color 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+  // Hover state
+  &:hover:not(:disabled) {
+    border: 2px solid $button-border-active;
+    box-shadow: 0px 5px 4px 0px rgba(0, 0, 0, 0.7);
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 183, 183, 1) 0%,
+      rgba(206, 0, 0, 1) 10%
+    );
+    transform: translateY(-1px);
+  }
+
+  // Active/Selected state
+  &.active {
+    border: 2px solid $button-border-active;
+  }
+
+  // Disabled state
+  &:disabled {
+    cursor: not-allowed;
+    box-shadow: 0px 2px 0px 0px rgba(0, 0, 0, 0.7);
+    color: $button-text-disabled;
+    background-image: linear-gradient(
+      180deg,
+      rgba(255, 183, 183, 1) 0%,
+      rgba(206, 0, 0, 1) 10%
+    );
+  }
+}

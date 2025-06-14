@@ -1,0 +1,164 @@
+@use "variables" as *;
+
+.login-container {
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 57px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  background: rgb(35, 36, 70);
+  background-image: linear-gradient(
+    180deg,
+    rgba(35, 36, 70, 1) 0%,
+    rgba(58, 60, 120, 1) 55%,
+    rgba(35, 36, 70, 1) 100%
+  );
+
+  h1 {
+    color: $login-text-color;
+    font-size: 3.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+  }
+
+  .host-id {
+    color: $login-text-color;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
+  }
+}
+
+.moon-bg {
+  position: absolute;
+  top: 38px;
+  left: 546px;
+  height: 350px;
+  width: 350px;
+  border-radius: 999px;
+  background: linear-gradient(120deg, rgba(255, 255, 255, 0) 0%, rgba(255, 132, 0, 0.080) 100%);
+}
+
+.login-card {
+  position: relative;
+  padding: $login-padding;
+  padding-top: 44px;
+  padding-bottom: 44px;
+  border-radius: 18px;
+  width: 100%;
+  max-width: 450px;
+  backdrop-filter: blur(4px);
+  border: none;
+  
+  &::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    border-radius: calc(#{18px} + 2px);
+    background: linear-gradient(0deg, rgba(249, 237, 7, 0.13) 0%, rgba(255,187,0,1) 100%);
+    z-index: -2;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: $login-card-bg;
+    border-radius: 18px;
+    z-index: -1;
+  }
+
+  .input-group {
+    margin-bottom: 1rem;
+    position: relative;
+    z-index: 1;
+
+    input {
+      width: 100%;
+      height: $login-input-height;
+      background: $login-input-bg;
+      border: none;
+      border-radius: $login-border-radius;
+      padding: 0 1rem;
+      color: $login-text-color;
+      font-size: 1rem;
+      transition: all $transition-speed ease;
+
+      &::placeholder {
+        color: rgba(255, 255, 255, 0.363);
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    .password-div {
+      position: relative;
+
+      .toggle-password {
+        position: absolute;
+        right: 1rem;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: rgba(255, 255, 255, 0.5);
+        cursor: pointer;
+
+        &:hover {
+          color: $login-text-color;
+        }
+      }
+    }
+  }
+
+  .button-group {
+    display: flex;
+    gap: 12px;
+    margin-top: 2rem;
+    position: relative;
+    z-index: 1;
+
+    button {
+      width: 150px;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+
+      &.close-btn {
+        background: $login-close-bg;
+        color: $login-text-color;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: $login-border-radius;
+
+        &:hover {
+          background: rgba(255, 255, 255, 0.1);
+        }
+      }
+    }
+  }
+}
+
+.bg-img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100vh;
+}
+
+.block-icon {
+  display: block;
+}
+.hide-icon {
+  display: none;
+}
