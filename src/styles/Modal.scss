@@ -1,0 +1,174 @@
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal {
+  background-image: url(../../public/assets/backgrounds/bgModal.png);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+  width: 1335.5px;
+  height: 800.79px;
+  overflow: hidden;
+  position: relative;
+  //   transform: scale(0.7);
+  //   opacity: 0;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1),
+    opacity 0.3s ease;
+}
+
+.detail-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 22px;
+  margin-right: 32px;
+  margin-top: 80px;
+
+  .modal-close {
+    background-image: url(../../public/assets/backgrounds/close-button.png);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    width: 45px;
+    height: 45px;
+    transition: all 0.3s ease;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .tab-btn {
+    // padding-left: 50px;
+    // padding-right: 50px;
+    // padding-top: 12.25px;
+    // padding-bottom: 12.25px;
+
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: #042655;
+
+    min-width: 178.72px;
+    height: 50px;
+
+    transition: all 0.3s ease;
+  }
+
+  .tab-btn-active {
+    background-image: url(../../public/assets/backgrounds/active-btn.png);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+    transform: scale(1.05);
+  }
+
+  .tab-btn-dactive {
+    background-image: url(../../public/assets/backgrounds/dactive-btn.png);
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+  }
+}
+
+.table-section {
+  padding-left: 16px;
+  padding-right: 16px;
+  margin-top: 32px;
+}
+
+/* Tab content areas */
+.tab-content {
+  display: none;
+  background: #ffe5c6;
+  padding: 30px;
+  border-radius: 16px;
+  // border: 1px solid #444;
+  animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.result-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .head-left {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    p {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22.56px;
+      line-height: 34px;
+      color: #000000;
+    }
+    button {
+      height: fit-content;
+    }
+  }
+  .head-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    p {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18.8px;
+      line-height: 28px;
+      color: #042655;
+    }
+    .arrowicon {
+      width:  32.55px;
+      height: 32.55px;
+      transition: all 0.3s ease;
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+    .left {
+      background-image: url(../../public/assets/backgrounds/left-arrow.png);
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover;
+    }
+    .right {
+      background-image: url(../../public/assets/backgrounds/right-arrow.png);
+      background-position: center; /* Center the image */
+      background-repeat: no-repeat; /* Do not repeat the image */
+      background-size: cover;
+    }
+  }
+}

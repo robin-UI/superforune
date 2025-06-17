@@ -7,7 +7,9 @@ import "./styles/Login.scss"
 import "./styles/Header.scss"
 import "./styles/Checkbox.scss"
 import "./styles/GameTopSection.scss"
+import "./styles/Modal.scss"
 import "./sound.js";
+import "./animations/effects.js"
 
 // user name : fortunesuperchance
 // password : superchance123

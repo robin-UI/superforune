@@ -215,13 +215,115 @@
             <p class="open-no"><span>0</span></p>
           </div>
         </div>
-        <button class="info-btn"></button>
+        <button class="info-btn" id="openModal-btn"></button>
       </div>
 
       <div class="bottom-section"></div>
     </section>
 
+    <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+        <div class="detail-btn">
+          <button class="tab-btn tb-1 tab-btn-active" data-tab="result">
+            <span>RESULT</span>
+          </button>
+          <button class="tab-btn tb-2 tab-btn-dactive" data-tab="history">
+            <span>GAME HISTORY</span>
+          </button>
+          <button class="tab-btn tb-3 tab-btn-dactive" data-tab="rules">
+            <span>RULES</span>
+          </button>
+          <button class="tab-btn tb-4 tab-btn-dactive" data-tab="report">
+            <span>REPORT</span>
+          </button>
+          <button class="tab-btn tb-6 tab-btn-dactive" data-tab="tickets">
+            <span>UNCLAIMED TICKETS</span>
+          </button>
+          <button class="modal-close" id="closeModal-btn"></button>
+        </div>
+
+        <div class="table-section">
+          <div class="tab-content active" id="result">
+            <div class="result-head">
+              <div class="head-left">
+                <p>SELECT DATE : <span>28/11/2024</span></p>
+                <div>
+                  <svg
+                    width="31"
+                    height="31"
+                    viewBox="0 0 31 31"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M3.7334 24.5576V9.51758H27.5467V24.5576C27.5467 25.9362 26.4187 27.0642 25.0401 27.0642H6.24006C4.8614 27.0642 3.7334 25.9362 3.7334 24.5576Z"
+                      fill="#CFD8DC"
+                    />
+                    <path
+                      d="M27.5467 7.01082V10.7708H3.7334V7.01082C3.7334 5.63215 4.8614 4.50415 6.24006 4.50415H25.0401C26.4187 4.50415 27.5467 5.63215 27.5467 7.01082Z"
+                      fill="#F44336"
+                    />
+                    <path
+                      d="M21.2801 8.89086C22.3184 8.89086 23.1601 8.04915 23.1601 7.01086C23.1601 5.97256 22.3184 5.13086 21.2801 5.13086C20.2419 5.13086 19.4001 5.97256 19.4001 7.01086C19.4001 8.04915 20.2419 8.89086 21.2801 8.89086Z"
+                      fill="#B71C1C"
+                    />
+                    <path
+                      d="M10.0001 8.89086C11.0384 8.89086 11.8801 8.04915 11.8801 7.01086C11.8801 5.97256 11.0384 5.13086 10.0001 5.13086C8.96182 5.13086 8.12012 5.97256 8.12012 7.01086C8.12012 8.04915 8.96182 8.89086 10.0001 8.89086Z"
+                      fill="#B71C1C"
+                    />
+                    <path
+                      d="M21.2802 2.62402C20.5908 2.62402 20.0268 3.18802 20.0268 3.87736V7.01069C20.0268 7.70002 20.5908 8.26402 21.2802 8.26402C21.9695 8.26402 22.5335 7.70002 22.5335 7.01069V3.87736C22.5335 3.18802 21.9695 2.62402 21.2802 2.62402ZM10.0002 2.62402C9.31083 2.62402 8.74683 3.18802 8.74683 3.87736V7.01069C8.74683 7.70002 9.31083 8.26402 10.0002 8.26402C10.6895 8.26402 11.2535 7.70002 11.2535 7.01069V3.87736C11.2535 3.18802 10.6895 2.62402 10.0002 2.62402Z"
+                      fill="#B0BEC5"
+                    />
+                    <path
+                      d="M8.74683 13.2776H11.2535V15.7843H8.74683V13.2776ZM12.5068 13.2776H15.0135V15.7843H12.5068V13.2776ZM16.2668 13.2776H18.7735V15.7843H16.2668V13.2776ZM20.0268 13.2776H22.5335V15.7843H20.0268V13.2776ZM8.74683 17.0376H11.2535V19.5443H8.74683V17.0376ZM12.5068 17.0376H15.0135V19.5443H12.5068V17.0376ZM16.2668 17.0376H18.7735V19.5443H16.2668V17.0376ZM20.0268 17.0376H22.5335V19.5443H20.0268V17.0376ZM8.74683 20.7976H11.2535V23.3043H8.74683V20.7976ZM12.5068 20.7976H15.0135V23.3043H12.5068V20.7976ZM16.2668 20.7976H18.7735V23.3043H16.2668V20.7976ZM20.0268 20.7976H22.5335V23.3043H20.0268V20.7976Z"
+                      fill="#90A4AE"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <div class="head-right">
+                <button class="arrowicon left push-btn"></button>
+                <p>1</p>
+                <button class="arrowicon right push-btn"></button>
+              </div>
+            </div>
+          </div>
+
+          <div class="tab-content" id="history">
+            <h3>📚 Game History</h3>
+            <p>View your complete gaming history and past activities.</p>
+            <p>Total games played: <strong>247</strong></p>
+            <p>Win rate: <strong>23%</strong></p>
+          </div>
+
+          <div class="tab-content" id="rules">
+            <h3>📋 Rules</h3>
+            <p>Learn about the game rules and regulations.</p>
+            <p>1. Each player can make up to 5 selections</p>
+            <p>2. Results are announced every hour</p>
+            <p>3. Winnings are credited automatically</p>
+          </div>
+
+          <div class="tab-content" id="report">
+            <h3>📊 Report</h3>
+            <p>Generate and view detailed reports of your activity.</p>
+            <p>Monthly summary available</p>
+            <p>Export options: PDF, Excel, CSV</p>
+          </div>
+
+          <div class="tab-content" id="tickets">
+            <h3>🎫 Unclaimed Tickets</h3>
+            <p>Check your unclaimed tickets and prizes.</p>
+            <p>Unclaimed tickets: <strong>3</strong></p>
+            <p>Total value: <strong>$125.50</strong></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script type="module" src="./src/components/header.js"></script>
+    <script type="module" src="./src/components/modal.js"></script>
     <script type="module" src="src/main.js"></script>
   </body>
 </html>
